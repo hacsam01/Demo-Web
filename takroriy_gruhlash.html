@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takroriy guruhlash, o‘rinlashtirish, o‘rin almashtirish</title>
+    <style>
+        .highlight-green {
+            color: green;
+        }
+
+        .highlight-red {
+            color: red;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p.result {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .definition {
+            border-radius: 25%;
+            border-color: #0800f4;
+            border-bottom: 2px solid #0800f4;
+            /* This adds a solid line underneath */
+            padding-bottom: 10px;
+            /* Adjust this value as needed to control the spacing between text and line */
+        }
+
+        .highlight {
+            color: #0ebee5;
+            font-style: italic;
+        }
+
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            input[type="number"] {
+                width: calc(50% - 5px);
+                margin-right: 5px;
+            }
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #ccc;
+        }
+
+        .custom-table th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .custom-table th:first-child {
+            border-right: none;
+        }
+
+        .custom-table th:last-child {
+            border-left: none;
+        }
+
+        .custom-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .custom-table td:first-child {
+            border-right: none;
+        }
+
+        .custom-table td:last-child {
+            border-left: none;
+        }
+
+        .custom-table tr:last-child th,
+        .custom-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1><span style="color: #000000; font-weight: bold;">Takroriy guruhlash, o‘rinlashtirish, o‘rin almashtirish
+                formulalari isboti. Misollar</span></h1>
+        <div>
+            <h2 style=" color: #45a049;">1.Takroriy guruhlash</h2>
+            <h3 style="border-radius: 25%;  ">
+                <label>Ta’rif.</label>
+                <span style="color: #0ebee5; font-style: italic;">n</span> ta elementli to‘plamning barcha
+                tartiblanmagan
+                <span style="color: #0ebee5; font-weight: bold;">takrorlanuvchi</span>
+                <span style="color: #0ebee5; font-style: italic;">k</span> ta elementli
+                <span style="color: #0ebee5; font-weight: bold;">qism to‘plamlarini</span>
+                ajratish
+                <span style="color: #0ebee5; font-style: italic;">takrorlanuvchi guruhlash </span> deyiladi.
+            </h3>
+
+
+
+            <h2 style="text-align:start">Formula.</h2>
+            <img src="./guruhlash.png"
+                alt="formula">
+            <h2 style="text-align:start">Misol.</h2>
+            <h3> <span style="color: #050505c5; font-weight: bold;">3 ta kitobdan 2 tasini tanlab, nechta turlicha
+                    variant hosil qilish mumkin?</span></h3>
+            <table class="custom-table">
+                <tr>
+                    <th>1-kitob</th>
+                    <th>2-kitob</th>
+                    <th>3-kitob</th>
+                </tr>
+            </table>
+
+
+
+
+            <table class="custom-table">
+                <tr>
+                    <th>(1-2)-kitoblar</th>
+                    <th>(2-3)-kitoblar</th>
+                </tr>
+                <tr>
+                    <th>(1-3)-kitoblar</th>
+                    <th>(2-2)-kitoblar</th>
+                </tr>
+                <tr>
+                    <th>(1-1)-kitoblar</th>
+                    <th>(3-3)-kitoblar</th>
+                </tr>
+                <tr>
+                    <th>Jami:</th>
+                    <th>6 ta guruh</th>
+                </tr>
+            </table>
+            <h2>Kalkulator(Guruhlash)</h2>
+            <label for="n">n:</label>
+            <input type="number" id="nRepeated" value="3">
+            <label for="k">k:</label>
+            <input type="number" id="kRepeated" value="2">
+            <button onclick="calculateRepeatedGrouping()">Hisobla</button>
+            <p id="resultRepeated" class="result"></p>
+
+            <h2 style="text-align:start">Misol 2.</h2>
+            <h3> <span style="color: #050505c5; font-weight: bold;">7 ta o’yin kubigini tashlab, nechta turlicha variant
+                    hosil qilish mumkin?</span></h3>
+            <h2 style="text-align:start">Yechilishi:</h2>
+            <h3> <span style="color: #050505c5; font-weight: bold;">Har bir o’yin kubigida 1 dan 6 gacha raqamlardan
+                    bittasi tushishi mumkin, ya’ni har bir kubikda 6 ta variant bo’lishi mumkin. Agar 7 ta o’yin kubigi
+                    tashlansa, har bir variantni 7 ta ob’yektning tartiblanmagan takrorlanuvchi ketma-ketligi deyish
+                    mumkin, ularning har biri uchun esa 6 ta imkoniyat bor</span></h3>
+            <h4 style="color: #3686e7;">n=6 <br> k=7 <br> Natija: 792</h4>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <h2 style=" color: #45a049;">2.Takroriy O‘rinlashtirish</h2>
+            <h3>
+                <label>Ta’rif.</label>
+                <span style="color: #3d3d3d;"> n ta elementi bo`lgan S to‘plamda birinchi elementni tanlash uchun n ta
+                    imkoniyat bor
+                    joylashtirish takrorlanuvchi bo`lgani uchun qolgan ixtiyoriy element uchun
+                    ham n ta imkoniyat qoladi.</span>
+                Ko`paytirish qoidasiga ko`ra barcha takrorlanadigan joylashtirishlar soni quyidagiga teng bo`ladi:
+            </h3>
+            <h2 style="text-align:start">Formula.</h2>
+            <img src="./formula_2.png"
+                alt="formula">
+            <h2 style="text-align:start">Misol.</h2>
+            <h3> <span style="color: #050505c5; font-weight: bold;">2,4,6,7 raqamlari yordamida nechta 3 xonali son
+                    tuzish mumkin?</span></h3>
+            <table class="custom-table">
+                <tr>
+                    <th>3-xona</th>
+                    <th>2-xona</th>
+                    <th>1-xona</th>
+                </tr>
+                <tr>
+                    <th>2,4,6,7 lardan biri <br>
+                        4 xil usulda</th>
+                    <th>2,4,6,7 lardan biri <br>
+                        4 xil usulda</th>
+                    <th>2,4,6,7 lardan biri <br>
+                        4 xil usulda</th>
+                </tr>
+            </table>
+            <h3>Jami: 4*4*4 = 64 ta </h3>
+
+
+            <h2>Kalkulyator(O‘rinlashtirish)</h2>
+            <label for="n">n:</label>
+            <input type="number" id="nPermutation" value="4">
+            <label for="k">k:</label>
+            <input type="number" id="kPermutation" value="3">
+            <button onclick="calculatePermutation()">Hisobla</button>
+            <p id="resultPermutation" class="result"></p>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <h2 style=" color: #45a049;">3.Takroriy o‘rin almashtirishlar</h2>
+            <h3>
+                <label>Ta’rif.</label>
+                <span style="color: #3d3d3d;">Elementlarining k_1 tasi 1- tipda, k_2 tasi 2-tipda, va hokazo k_m tasi
+                    m-tipda bo‘lgan n elementli to‘plamning barcha o‘rin almashtirishlar soni</span>
+            </h3>
+            <h2 style="text-align:start">Formula.</h2>
+            <img src="./formula_3.png"
+                alt="formula">
+            <h3>
+                <span style="color: #3d3d3d;">ta bo'ladi.</span>
+            </h3>
+            <h2 style="text-align:start">Misol.</h2>
+            <h3> <span style="color: #050505c5; font-weight: bold;">“Samandar” so‘zidagi harflarni qatnashtirib, nechta
+                    so‘z (ma`nosi bo`lishi shart emas!) yasash mumkin?</span></h3>
+            <table class="custom-table">
+                <tr>
+                    <th>Harflar</th>
+                    <th>Belgilanishi</th>
+                    <th>Soni</th>
+                </tr>
+                <tr>
+                    <th>S</th>
+                    <th>k_1</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>a</th>
+                    <th>k_2</th>
+                    <th>3</th>
+                </tr>
+                <tr>
+                    <th>m</th>
+                    <th>k_3</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>n</th>
+                    <th>k_4</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>d</th>
+                    <th>k_5</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>r</th>
+                    <th>k_6</th>
+                    <th>1</th>
+                </tr>
+
+            </table>
+            <h3>Jami: n= 8 ta, Natija: 6720 </h3>
+
+
+            <h2>Kalkulyator(O‘rin almashtirish)</h2>
+            <label for="n">n:</label>
+            <input type="number" id="nCombination" value="8">
+            <label for="k">k ning qiymatlari ( k1=1, k2=3, ... ,km=1 va k1+k2+...km=n):</label>
+            <input type="text" id="kCombination" value="1,3,1,1,1,1">
+            <button onclick="calculateCombination()">Hisobla</button>
+            <p id="resultCombination" class="result"></p>
+        </div>
+    </div>
+
+    <script>
+        function factorial(n) {
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        function calculateRepeatedGrouping() {
+            var n = parseInt(document.getElementById("nRepeated").value);
+            var k = parseInt(document.getElementById("kRepeated").value);
+            var result = factorial(n + k - 1) / (factorial(k) * factorial(n - 1));
+            document.getElementById("resultRepeated").textContent = "Natija: " + result;
+        }
+
+        function calculatePermutation() {
+            var n = parseInt(document.getElementById("nPermutation").value);
+            var k = parseInt(document.getElementById("kPermutation").value);
+            var result = Math.pow(n, k);
+            document.getElementById("resultPermutation").textContent = "Natija: " + result;
+        }
+
+        function calculateCombination() {
+            var n = parseInt(document.getElementById("nCombination").value);
+            var k_string = document.getElementById("kCombination").value;
+            var list = k_string.split(',');
+            var result1 = 1;
+            list.forEach(element => {
+                result1 *= factorial(parseInt(element));
+            });
+
+            var result = factorial(n) / result1;
+            document.getElementById("resultCombination").textContent = "Natija: " + result;
+        }
+
+
+    </script>
+</body>
+
+</html>
